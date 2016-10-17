@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<link rel="stylesheet" href="jquery-ui.css">
+<script lang="javascript" src="jquery-3.1.0.min.js" ></script>
+<script lang="javascript" src="jquery-ui.min.js" ></script>
+<script lang="javascript">
+  $(function() {
+
+    $( "#city" ).autocomplete({
+      source: function( request, response ) {
+        $.ajax({
+          url: "http://gd.geobytes.com/AutoCompleteCity",
+          dataType: "jsonp",
+          data: {
+            q: request.term
+          },
+          success: function( data ) {
+            response( data );
+          }
+        });
+      },
+      minLength: 3
+    });
+  });
+</script>
+
+</head>
+<body>
+<div class="ui-widget">
+  <label for="city">Your city: </label>
+  <input id="city"> 
+</div>
+
+</body>
+</html>
