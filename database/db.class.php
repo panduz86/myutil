@@ -167,6 +167,18 @@
 
       return $result->fetch_object();
     }
+    
+    public function queryUniqueArray($query, $debug = -1)
+    {
+      $query = "$query LIMIT 1";
+
+      $this->nbQueries++;
+      $result = $this->connection->query($query) or $this->debugAndDie($query);
+
+      $this->debug($debug, $query, $result);
+
+      return $result->fetch_assoc();
+    }
     /** Get the result of the query as value. The query should return a unique cell.\n
       * Note: no need to add "LIMIT 1" at the end of your query because
       * the method will add that (for optimisation purpose).
