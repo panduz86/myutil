@@ -73,7 +73,7 @@
     	} else {
     		$ret = array();
     	
-    		while ($row = $this->lastResult->fetch_assoc($result)) {
+    		while ($row = $this->lastResult->fetch_assoc()) {
     			$ret[] = $row;
     		}
     	

@@ -3,3 +3,6 @@
 .buildpath
 .project
 .settings/
+
+#NetBeans
+nbproject/
