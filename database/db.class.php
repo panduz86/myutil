@@ -1,7 +1,7 @@
 <?php
   /** 
   	* Class interface for managing query to MySql
-    * @version  16.0.0
+    * @version  16.1.0
     * @author   panduz
     */
   class DB
@@ -20,9 +20,9 @@
       */
     private $lastResult;
 	
-	/** INTERNAL: The link of the connection created.
+    /** INTERNAL: The link of the connection created.
       */
-	private $connection;
+    private $connection;
 
     /** Connect to a MySQL database to be able to use the methods below.
       */
@@ -372,6 +372,11 @@
     public function escape($escapest)
     {
     	return $this->connection->escape_string($escapest);
+    }
+    
+    public function getServerInfo()
+    {
+    	return mysqli_get_server_info($this->connection);
     }
   } // class DB
 ?>

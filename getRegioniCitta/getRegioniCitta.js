@@ -1,13 +1,10 @@
 /*
 Gestione combo regioni-province-comuni
+@version 16.0.0
 */
 
-//var dir="http://www.sito.com/";
-
-var dir="http://localhost/ecommerce/";
-
 function getRegioni(country_code,destinazione){
-    var url_script = dir+"ajax_script/getRegioni.php";
+    var url_script = "ajax_script/getRegioni.php";
 
     $.ajax({
         url : url_script,
@@ -27,7 +24,7 @@ function getRegioni(country_code,destinazione){
 }
 
 function getProvince(region_code,country_code,destinazione){
-    var url_script = dir+"ajax_script/getProvince.php";
+    var url_script = "ajax_script/getProvince.php";
         
     $.ajax({
         url : url_script,
