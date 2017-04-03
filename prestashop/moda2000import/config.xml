@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+        <module>
+            <name>moda2000import</name>
+            <displayName><![CDATA[Moda Import for PS]]></displayName>
+            <version><![CDATA[2.8]]></version>
+            <description><![CDATA[Can Import datas from Moda 2000]]></description>
+            <author><![CDATA[Disarci]]></author>
+            <tab><![CDATA[migration_tools]]></tab>
+            <is_configurable>1</is_configurable>
+            <need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+        </module>
